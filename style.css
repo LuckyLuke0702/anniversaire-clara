@@ -324,7 +324,7 @@ video {
     }
 }
 
-/* 📱 Même interface que sur ordinateur */
+
 @media (max-width: 600px) {
 
     body {
@@ -376,7 +376,7 @@ video {
         z-index: 10;
     }
 
-    /* Garder les décorations dans le même esprit que sur ordinateur */
+
 
     .decoration {
         position: absolute;
@@ -423,6 +423,59 @@ video {
         width: 90px;
         bottom: 11%;
         left: 12%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+
+      
+        min-width: 900px;
+
+        transform-origin: top left;
+        transform: scale(0.42);
+
+        /* Compense le zoom */
+        width: 238%;
+    }
+
+    .cadeau {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    .surprise {
+        width: 900px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    .surprise h1 {
+        font-size: 75px;
+        white-space: nowrap;
+    }
+
+    .surprise p {
+        font-size: 35px;
+    }
+
+    video {
+        width: 25%;
+        height: auto;
+    }
+
+    .decoration {
+        position: fixed;
     }
 }
 
