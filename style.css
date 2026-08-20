@@ -93,7 +93,7 @@ button:hover {
 
 
 /* =========================
-   SURPRISE
+   PAGE SURPRISE
 ========================= */
 
 .surprise {
@@ -276,7 +276,9 @@ video {
 }
 
 
-/* Positions ordinateur */
+/* =========================
+   POSITIONS ORDINATEUR
+========================= */
 
 .deco1 {
     top: 9%;
@@ -363,9 +365,13 @@ video {
         display: block;
 
         min-width: 900px;
-        min-height: 100vh;
+
+        /* Empêche le grand espace vide */
+        min-height: 0;
 
         transform-origin: top left;
+
+        /* Dézoom */
         transform: scale(0.42);
 
         width: 238%;
@@ -373,6 +379,10 @@ video {
         overflow: visible;
     }
 
+
+    /* =========================
+       CADEAU
+    ========================= */
 
     .cadeau {
         width: 900px;
@@ -384,13 +394,16 @@ video {
     }
 
 
+    /* =========================
+       PAGE SURPRISE
+    ========================= */
+
     .surprise {
         position: relative;
 
         width: 900px;
         max-width: none;
 
-        /* Pas de grande zone vide */
         min-height: 0;
         height: auto;
 
@@ -401,7 +414,7 @@ video {
 
 
     /* =========================
-       TITRE TÉLÉPHONE
+       TITRE
     ========================= */
 
     .surprise h1 {
@@ -416,23 +429,25 @@ video {
 
 
     /* =========================
-       TEXTE TÉLÉPHONE
+       TEXTE
     ========================= */
 
     .surprise p {
         font-size: 35px;
+
         line-height: 1.2;
     }
 
 
     /* =========================
-       VIDEO TÉLÉPHONE
+       VIDEO
     ========================= */
 
     video {
         display: block;
 
         width: 25%;
+
         max-width: 350px;
 
         height: auto;
@@ -442,46 +457,58 @@ video {
 
 
     /* =========================
-       IMAGES TÉLÉPHONE
+       IMAGES
     ========================= */
 
     .decoration {
         position: absolute;
+
         z-index: 2;
     }
 
 
-    /* Chien gauche */
+    /* -------------------------
+       OXY 1
+       → remonté
+    ------------------------- */
 
     .deco1 {
-        top: 360px;
+        top: 250px;
         left: 35px;
 
         width: 105px;
     }
 
 
-    /* Cotillons en haut à droite */
+    /* -------------------------
+       TECKEL
+       → descendu
+    ------------------------- */
 
     .deco2 {
-        top: 30px;
+        top: 520px;
         right: 35px;
 
         width: 120px;
     }
 
 
-    /* Chien à droite de la vidéo */
+    /* -------------------------
+       OXY 2
+       → à droite de la vidéo
+    ------------------------- */
 
     .deco3 {
-        top: 480px;
+        top: 500px;
         right: 30px;
 
         width: 130px;
     }
 
 
-    /* Jinx à gauche de la vidéo */
+    /* -------------------------
+       JINX
+    ------------------------- */
 
     .deco4 {
         top: 500px;
@@ -491,7 +518,9 @@ video {
     }
 
 
-    /* Logo en bas à droite */
+    /* -------------------------
+       YELLOWJACKETS
+    ------------------------- */
 
     .deco5 {
         top: 750px;
@@ -501,7 +530,9 @@ video {
     }
 
 
-    /* Petit dé */
+    /* -------------------------
+       DÉ STRANGER THINGS
+    ------------------------- */
 
     .deco6 {
         top: 690px;
@@ -511,7 +542,9 @@ video {
     }
 
 
-    /* Petit chien */
+    /* -------------------------
+       TECKEL DANIEL
+    ------------------------- */
 
     .deco7 {
         top: 760px;
@@ -521,9 +554,14 @@ video {
     }
 
 
+    /* -------------------------
+       DRAGON
+       → entre TECKEL et OXY 2
+    ------------------------- */
+
     .deco8 {
-        top: 690px;
-        right: 170px;
+        top: 370px;
+        right: 35px;
 
         width: 120px;
     }
