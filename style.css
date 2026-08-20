@@ -364,7 +364,7 @@ video {
    📱 TELEPHONE
 ================================================== */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
     body {
         display: block;
