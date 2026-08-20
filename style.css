@@ -276,7 +276,7 @@ video {
 }
 
 
-/* Positions */
+/* Positions ordinateur */
 
 .deco1 {
     top: 9%;
@@ -354,33 +354,25 @@ video {
 
 
 /* ==================================================
-   📱 TELEPHONE
+   📱 VERSION TÉLÉPHONE
 ================================================== */
 
 @media screen and (max-width: 600px) {
-
-    /*
-       On garde une grande zone de 900px,
-       comme sur ordinateur.
-    */
 
     body {
         display: block;
 
         min-width: 900px;
+        min-height: 100vh;
 
         transform-origin: top left;
-        transform: scale(0.50);
+        transform: scale(0.42);
 
         width: 238%;
-
-        min-height: 238vh;
 
         overflow: visible;
     }
 
-
-    /* Même largeur que sur ordinateur */
 
     .cadeau {
         width: 900px;
@@ -393,18 +385,24 @@ video {
 
 
     .surprise {
+        position: relative;
+
         width: 900px;
         max-width: none;
 
-        min-height: 238vh;
+        /* Pas de grande zone vide */
+        min-height: 0;
+        height: auto;
 
-        padding: 40px 30px;
+        padding: 40px 30px 60px;
 
         margin: 0 auto;
     }
 
 
-    /* Titre identique à l'ordinateur */
+    /* =========================
+       TITRE TÉLÉPHONE
+    ========================= */
 
     .surprise h1 {
         font-size: 75px;
@@ -413,31 +411,120 @@ video {
 
         line-height: 1;
 
-        margin-top: 30px;
+        margin: 30px 0 25px;
     }
 
 
-    /* Texte */
+    /* =========================
+       TEXTE TÉLÉPHONE
+    ========================= */
 
     .surprise p {
         font-size: 35px;
+        line-height: 1.2;
     }
 
 
-    /* Vidéo */
+    /* =========================
+       VIDEO TÉLÉPHONE
+    ========================= */
 
     video {
-        width: 25%;
+        display: block;
 
+        width: 25%;
         max-width: 350px;
+
+        height: auto;
 
         margin: 20px auto;
     }
 
 
-    /* Les images restent grandes et espacées */
+    /* =========================
+       IMAGES TÉLÉPHONE
+    ========================= */
 
     .decoration {
-        position: fixed;
+        position: absolute;
+        z-index: 2;
+    }
+
+
+    /* Chien gauche */
+
+    .deco1 {
+        top: 360px;
+        left: 35px;
+
+        width: 105px;
+    }
+
+
+    /* Cotillons en haut à droite */
+
+    .deco2 {
+        top: 30px;
+        right: 35px;
+
+        width: 120px;
+    }
+
+
+    /* Chien à droite de la vidéo */
+
+    .deco3 {
+        top: 480px;
+        right: 30px;
+
+        width: 130px;
+    }
+
+
+    /* Jinx à gauche de la vidéo */
+
+    .deco4 {
+        top: 500px;
+        left: 20px;
+
+        width: 105px;
+    }
+
+
+    /* Logo en bas à droite */
+
+    .deco5 {
+        top: 750px;
+        right: 80px;
+
+        width: 95px;
+    }
+
+
+    /* Petit dé */
+
+    .deco6 {
+        top: 690px;
+        left: 180px;
+
+        width: 60px;
+    }
+
+
+    /* Petit chien */
+
+    .deco7 {
+        top: 760px;
+        left: 70px;
+
+        width: 90px;
+    }
+
+
+    .deco8 {
+        top: 690px;
+        right: 170px;
+
+        width: 120px;
     }
 }
