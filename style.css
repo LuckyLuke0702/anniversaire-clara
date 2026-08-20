@@ -73,7 +73,7 @@ button:hover {
 
     width: 90%;
     max-width: 900px;
-
+    white-space: nowrap;
     padding: 30px;
 }
 
@@ -274,7 +274,6 @@ video {
     transform: rotate(35deg);
 }
 
-/* 📱 Version téléphone */
 @media (max-width: 600px) {
 
     body {
