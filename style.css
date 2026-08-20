@@ -492,7 +492,7 @@ video {
     ------------------------- */
 
     .deco2 {
-        top: 250px;
+        top: 1000px;
         right: 35px;
 
         width: 120px;
@@ -542,7 +542,7 @@ video {
     ------------------------- */
 
     .deco6 {
-        top: 580px;
+        top: 800px;
         left: 180px;
 
         width: 60px;
@@ -568,7 +568,7 @@ video {
 
     .deco8 {
         top: 370px;
-        right: 35px;
+        right: 50px;
 
         width: 120px;
     }
