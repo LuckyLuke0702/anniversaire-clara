@@ -324,6 +324,7 @@ video {
     }
 }
 
+/* 📱 Même interface que sur ordinateur */
 @media (max-width: 600px) {
 
     body {
@@ -334,93 +335,94 @@ video {
 
     .surprise {
         position: relative;
-        width: 100%;
-        max-width: 100%;
-        padding: 80px 20px 40px;
-        margin: 0 auto;
+
+        width: 900px;
+        max-width: none;
+
+        min-height: 100vh;
+
+        padding: 60px 80px;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 
     .surprise h1 {
-        font-size: 42px;
-        line-height: 1.15;
-        white-space: normal;
-        margin: 20px 0;
+        font-size: 75px;
+        line-height: 1;
+        white-space: nowrap;
+
+        margin: 20px 0 30px;
+
         position: relative;
         z-index: 10;
     }
 
     .surprise p {
-        font-size: 22px;
-        line-height: 1.3;
+        font-size: 35px;
+
         position: relative;
         z-index: 10;
     }
 
     video {
         display: block;
-        width: 100%;
-        max-width: 100%;
+
+        width: 350px;
         height: auto;
-        margin: 25px auto;
+
+        margin: 20px auto;
+
         position: relative;
         z-index: 10;
     }
 
-    /* Images décoratives */
+    /* Garder les décorations dans le même esprit que sur ordinateur */
+
     .decoration {
         position: absolute;
         z-index: 1;
     }
 
     .deco1 {
-        width: 65px;
-        top: 10px;
-        left: 10px;
+        width: 105px;
+        top: 9%;
+        left: 7%;
     }
 
     .deco2 {
-        width: 70px;
-        top: 10px;
-        right: 10px;
+        width: 120px;
+        top: 9%;
+        right: 7%;
     }
 
     .deco3 {
-        width: 70px;
-        top: 180px;
-        right: 5px;
+        width: 130px;
+        bottom: 32%;
+        right: 3%;
     }
 
     .deco4 {
-        width: 60px;
-        top: 180px;
-        left: 5px;
+        width: 105px;
+        top: 50%;
+        left: 3%;
     }
 
     .deco5 {
-        width: 60px;
-        bottom: 80px;
-        right: 10px;
+        width: 95px;
+        bottom: 9%;
+        right: 11%;
     }
 
     .deco6 {
-        width: 45px;
-        bottom: 80px;
-        left: 10px;
+        width: 60px;
+        top: 37%;
+        left: 20%;
     }
 
     .deco7 {
-        width: 60px;
-        bottom: 10px;
-        left: 10px;
-    }
-
-    .deco8 {
-        width: 70px;
-        bottom: 10px;
-        right: 10px;
+        width: 90px;
+        bottom: 11%;
+        left: 12%;
     }
 }
-
-
-
 
