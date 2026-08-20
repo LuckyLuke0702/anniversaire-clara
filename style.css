@@ -39,7 +39,7 @@ body {
 
 
 /* =========================
-   PAGE DU CADEAU
+   PAGE CADEAU
 ========================= */
 
 .cadeau {
@@ -93,7 +93,7 @@ button:hover {
 
 
 /* =========================
-   PAGE SURPRISE
+   SURPRISE
 ========================= */
 
 .surprise {
@@ -199,7 +199,7 @@ video {
 
     pointer-events: none;
 
-    z-index: 100;
+    z-index: 1000;
 }
 
 @keyframes tomber {
@@ -217,11 +217,12 @@ video {
 
 
 /* =========================
-   EMOJI DU CADEAU
+   EMOJI CADEAU
 ========================= */
 
 .emoji {
     font-size: 100px;
+
     margin-bottom: 20px;
 
     animation: bouger 1.5s infinite;
@@ -249,6 +250,7 @@ video {
 
 .miroir {
     display: inline-block;
+
     transform: scaleX(-1);
 }
 
@@ -345,6 +347,9 @@ video {
     transform: rotate(-12deg);
 }
 
+
+/* DRAGON */
+
 .deco8 {
     top: 37%;
     right: 17%;
@@ -356,7 +361,7 @@ video {
 
 
 /* ==================================================
-   📱 VERSION TÉLÉPHONE
+   📱 TELEPHONE
 ================================================== */
 
 @media screen and (max-width: 600px) {
@@ -364,14 +369,17 @@ video {
     body {
         display: block;
 
+        /*
+         * On garde la grande largeur virtuelle
+         * pour conserver exactement le même
+         * placement que sur ordinateur.
+         */
         min-width: 900px;
 
-        /* Empêche le grand espace vide */
         min-height: 0;
 
         transform-origin: top left;
 
-        /* Dézoom */
         transform: scale(0.42);
 
         width: 238%;
@@ -395,7 +403,7 @@ video {
 
 
     /* =========================
-       PAGE SURPRISE
+       SURPRISE
     ========================= */
 
     .surprise {
@@ -469,7 +477,6 @@ video {
 
     /* -------------------------
        OXY 1
-       → remonté
     ------------------------- */
 
     .deco1 {
@@ -482,7 +489,6 @@ video {
 
     /* -------------------------
        TECKEL
-       → descendu
     ------------------------- */
 
     .deco2 {
@@ -495,11 +501,11 @@ video {
 
     /* -------------------------
        OXY 2
-       → à droite de la vidéo
+       REMONTÉ
     ------------------------- */
 
     .deco3 {
-        top: 500px;
+        top: 420px;
         right: 30px;
 
         width: 130px;
@@ -532,10 +538,11 @@ video {
 
     /* -------------------------
        DÉ STRANGER THINGS
+       REMONTÉ
     ------------------------- */
 
     .deco6 {
-        top: 690px;
+        top: 580px;
         left: 180px;
 
         width: 60px;
@@ -556,7 +563,7 @@ video {
 
     /* -------------------------
        DRAGON
-       → entre TECKEL et OXY 2
+       ENTRE TECKEL ET OXY 2
     ------------------------- */
 
     .deco8 {
