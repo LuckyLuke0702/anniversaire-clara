@@ -4,8 +4,19 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+/* =========================
+   BASE
+========================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -22,27 +33,37 @@ body {
 
     color: #000000;
     text-align: center;
+
+    overflow-x: hidden;
 }
 
+
+/* =========================
+   PAGE DU CADEAU
+========================= */
+
 .cadeau {
+    width: 900px;
+    max-width: 90vw;
+
     padding: 40px;
 }
 
-.emoji {
-    font-size: 100px;
-    margin-bottom: 20px;
-
-    animation: bouger 1.5s infinite;
-}
-
-h1 {
+.cadeau h1 {
+    font-family: "JustLikeHeaven", cursive;
+    font-weight: normal;
     font-size: 60px;
-    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
-p {
+.cadeau p {
     font-size: 35px;
 }
+
+
+/* =========================
+   BOUTON
+========================= */
 
 button {
     margin-top: 25px;
@@ -58,37 +79,152 @@ button {
     font-family: "JustLikeHeaven", cursive;
     font-size: 30px;
     font-weight: normal;
+
     letter-spacing: 2px;
 
     cursor: pointer;
 
     transition: transform 0.2s;
 }
+
 button:hover {
     transform: scale(1.08);
 }
 
+
+/* =========================
+   SURPRISE
+========================= */
+
 .surprise {
     display: none;
 
-    width: 90%;
-    max-width: 900px;
-    white-space: nowrap;
+    position: relative;
+
+    width: 900px;
+    max-width: 90vw;
+
+    min-height: 100vh;
+
     padding: 30px;
+
+    margin: 0 auto;
 }
 
-video {
-    width: 25%;
 
-    margin-top: -10px;
+/* =========================
+   TITRE
+========================= */
+
+.surprise h1 {
+    font-family: "JustLikeHeaven", cursive;
+
+    color: #000000;
+
+    font-size: 75px;
+    font-weight: normal;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    margin: 20px 0 25px;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================
+   TEXTE
+========================= */
+
+.surprise p {
+    font-size: 35px;
+    line-height: 1.2;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+video {
+    display: block;
+
+    width: 25%;
+    max-width: 350px;
+
+    height: auto;
+
+    margin: 20px auto;
 
     border-radius: 15px;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+    z-index: 10;
 }
+
+
+/* =========================
+   TEXTE DE FIN
+========================= */
 
 .fin {
     margin-top: 15px;
+}
+
+
+/* =========================
+   CONFETTIS
+========================= */
+
+.confetti {
+    position: fixed;
+
+    top: -20px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 2px;
+
+    animation-name: tomber;
+    animation-timing-function: linear;
+
+    pointer-events: none;
+
+    z-index: 100;
+}
+
+@keyframes tomber {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   EMOJI DU CADEAU
+========================= */
+
+.emoji {
+    font-size: 100px;
+    margin-bottom: 20px;
+
+    animation: bouger 1.5s infinite;
 }
 
 @keyframes bouger {
@@ -104,378 +240,204 @@ video {
     100% {
         transform: rotate(-5deg);
     }
-
-}
-.confetti {
-    position: fixed;
-
-    top: -20px;
-
-    width: 12px;
-    height: 12px;
-
-    border-radius: 2px;
-
-    animation-name: tomber;
-
-    animation-timing-function: linear;
-
-    pointer-events: none;
 }
 
-@keyframes tomber {
 
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(110vh) rotate(720deg);
-        opacity: 0;
-    }
-
-}
+/* =========================
+   EMOJI MIROIR
+========================= */
 
 .miroir {
     display: inline-block;
     transform: scaleX(-1);
 }
 
-.surprise h1 {
-    font-family: "JustLikeHeaven", cursive;
-    color: #000000;
-    font-size: 75px;
-    font-weight: normal;
-    
-}
-.cadeau h1 {
-    font-family: "JustLikeHeaven", cursive;
-    font-weight: normal;
-}
+
+/* =========================
+   IMAGES DECORATIVES
+========================= */
 
 .decoration {
     position: fixed;
-    width: 45px;
+
     height: auto;
+
     z-index: 2;
+
     object-fit: cover;
 
-    transition: filter 0.25s ease, transform 0.25s ease;
+    transition:
+        filter 0.25s ease,
+        transform 0.25s ease;
 }
+
 .decoration:hover {
     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.8));
 }
 
 
+/* Positions */
+
 .deco1 {
     top: 9%;
     left: 7%;
+
+    width: 105px;
+
+    transform: rotate(-10deg);
+
+    border-radius: 70%;
 }
 
 .deco2 {
     top: 9%;
     right: 7%;
+
+    width: 120px;
+
+    transform: rotate(12deg);
 }
 
 .deco3 {
     bottom: 32%;
     right: 3%;
+
+    width: 130px;
+
+    transform: rotate(15deg);
 }
 
 .deco4 {
     top: 50%;
     left: 3%;
+
+    width: 105px;
+
+    transform: rotate(-5deg);
 }
 
 .deco5 {
     bottom: 9%;
     right: 11%;
+
+    width: 95px;
+
+    transform: rotate(0deg);
 }
 
 .deco6 {
     top: 37%;
     left: 20%;
-}
 
-.deco7 {
-    bottom: 11%; 
-    left: 12%; 
-}
-
-.deco8 {
-    top: 37%; 
-    right: 17%; 
-}
-
-.deco1 {
-    width: 105px;
-}
-
-.deco2 {
-    width: 120px;
-}
-
-.deco3 {
-    width: 130px;
-}
-
-.deco4 {
-    width: 105px;
-}
-
-.deco5 {
-    width: 95px;
-}
-
-.deco6 {
     width: 60px;
-}
 
-.deco7 {
-    width: 90px;
-}
-
-.deco8 {
-    width: 120px;
-}
-
-.deco1 {
-    transform: rotate(-10deg);
-    border-radius: 70%; /* Ajoute cette ligne pour arrondir parfaitement ! */
-}
-
-.deco2 {
-    transform: rotate(12deg);
-}
-
-.deco3 {
-    transform: rotate(15deg);
-}
-
-.deco4 {
-    transform: rotate(-5deg);
-}
-
-
-.deco5 {
-    transform: rotate(0deg);
-}
-
-.deco6 {
     transform: rotate(30deg);
 }
 
 .deco7 {
+    bottom: 11%;
+    left: 12%;
+
+    width: 90px;
+
     transform: rotate(-12deg);
 }
 
 .deco8 {
+    top: 37%;
+    right: 17%;
+
+    width: 120px;
+
     transform: rotate(35deg);
 }
 
-@media (max-width: 600px) {
 
-    body {
-        width: 100%;
-        min-height: 100vh;
-        overflow-x: hidden;
-    }
-
-    .cadeau {
-        width: 100%;
-        padding: 25px 15px;
-    }
-
-    .cadeau h1 {
-        font-size: 42px;
-        line-height: 1.2;
-    }
-
-    .cadeau p {
-        font-size: 25px;
-    }
-
-    .surprise {
-        width: 100%;
-        max-width: none;
-        padding: 20px 15px;
-    }
-
-    .surprise h1 {
-        font-size: 42px;
-        line-height: 1.2;
-        white-space: normal;
-        margin: 10px 0 20px;
-    }
-
-    .surprise p {
-        font-size: 23px;
-    }
-
-    video {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 10px;
-    }
-
-    .decoration {
-        position: absolute;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    body {
-        display: block;
-        min-height: 100vh;
-        overflow-x: hidden;
-    }
-
-    .surprise {
-        position: relative;
-
-        width: 900px;
-        max-width: none;
-
-        min-height: 100vh;
-
-        padding: 60px 80px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .surprise h1 {
-        font-size: 75px;
-        line-height: 1;
-        white-space: nowrap;
-
-        margin: 20px 0 30px;
-
-        position: relative;
-        z-index: 10;
-    }
-
-    .surprise p {
-        font-size: 35px;
-
-        position: relative;
-        z-index: 10;
-    }
-
-    video {
-        display: block;
-
-        width: 350px;
-        height: auto;
-
-        margin: 20px auto;
-
-        position: relative;
-        z-index: 10;
-    }
-
-
-
-    .decoration {
-        position: absolute;
-        z-index: 1;
-    }
-
-    .deco1 {
-        width: 105px;
-        top: 9%;
-        left: 7%;
-    }
-
-    .deco2 {
-        width: 120px;
-        top: 9%;
-        right: 7%;
-    }
-
-    .deco3 {
-        width: 130px;
-        bottom: 32%;
-        right: 3%;
-    }
-
-    .deco4 {
-        width: 105px;
-        top: 50%;
-        left: 3%;
-    }
-
-    .deco5 {
-        width: 95px;
-        bottom: 9%;
-        right: 11%;
-    }
-
-    .deco6 {
-        width: 60px;
-        top: 37%;
-        left: 20%;
-    }
-
-    .deco7 {
-        width: 90px;
-        bottom: 11%;
-        left: 12%;
-    }
-}
+/* ==================================================
+   📱 TELEPHONE
+================================================== */
 
 @media screen and (max-width: 600px) {
 
-    html {
-        width: 100%;
-        overflow-x: hidden;
-    }
+    /*
+       On garde une grande zone de 900px,
+       comme sur ordinateur.
+    */
 
     body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
+        display: block;
 
-      
         min-width: 900px;
 
         transform-origin: top left;
         transform: scale(0.42);
 
-        /* Compense le zoom */
         width: 238%;
+
+        min-height: 238vh;
+
+        overflow: visible;
     }
+
+
+    /* Même largeur que sur ordinateur */
 
     .cadeau {
         width: 900px;
+        max-width: none;
+
+        padding: 80px 30px;
+
         margin: 0 auto;
     }
+
 
     .surprise {
         width: 900px;
-        max-width: 900px;
+        max-width: none;
+
+        min-height: 238vh;
+
+        padding: 40px 30px;
+
         margin: 0 auto;
-        padding: 30px;
     }
+
+
+    /* Titre identique à l'ordinateur */
 
     .surprise h1 {
         font-size: 75px;
+
         white-space: nowrap;
+
+        line-height: 1;
+
+        margin-top: 30px;
     }
+
+
+    /* Texte */
 
     .surprise p {
         font-size: 35px;
     }
 
+
+    /* Vidéo */
+
     video {
         width: 25%;
-        height: auto;
+
+        max-width: 350px;
+
+        margin: 20px auto;
     }
+
+
+    /* Les images restent grandes et espacées */
 
     .decoration {
         position: fixed;
     }
 }
-
